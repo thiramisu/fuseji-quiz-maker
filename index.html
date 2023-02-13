@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@tiramisu_oTATo">
+  <meta property="og:title" content="伏字クイズめ～か～">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thiramisu.github.io/fuseji-quiz-maker/index.html">
+  <meta property="og:image" content="https://thiramisu.github.io/Minion-Masters-Deck-Image-Auto-Layout-Tool/thumbnail.jpg">
+  <meta property="og:description" content="テキストの伏字クイズを簡単に作れるツールです">
+  <title>伏字クイズめ～か～</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="description">
+      明るい方の行でテキストを直接編集できます。<br>
+      暗い方の行をドラッグするとその範囲の伏字状況を反転できます。<br>
+      横幅が足りないと見た目が残念なことになるので気を付けてください。<br>
+      記号は<span id="symbols"></span>が対象。足りないものがあったら言ってください。
+    </div>
+    <div class="controls">
+      <button id="copy">コピー</button>
+      <button id="reset">リセット</button>
+      <button id="reverse">範囲反転</button>
+      <button id="mask-hiragana">ひらがな</button>
+      <button id="mask-number">数字</button>
+      <button id="mask-symbol">記号</button>
+      <button id="mask-space">スペース</button>
+    </div>
+    <div id="editor" class="editor-container">
+    </div>
+  </main>
+  <footer class="footer center">created by ティラミス
+    <br>問題等ありましたら、ご連絡ください。</footer>
+  <script src="index.js"></script>
+</body>

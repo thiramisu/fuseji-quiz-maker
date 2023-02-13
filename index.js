@@ -157,7 +157,6 @@ window.addEventListener("load", () => {
         textarea.readOnly = true;
         textarea.rows = 1;
         textarea.classList.add("masked", `mode${ i - 1 }`);
-        textarea.value = text;
         modes[i - 1] = textarea;
         element.appendChild(textarea);
       }
@@ -166,6 +165,7 @@ window.addEventListener("load", () => {
       this.#original = text;
       this.#modes = modes;
       this.#maskPoints = new SortedList();
+      this.#applyMaskPoints();
       element.addEventListener("click", this.#onClick.bind(this));
     }
 
@@ -197,7 +197,7 @@ window.addEventListener("load", () => {
       this.#applyMaskPoints();
     }
 
-    getText(isMasked = this.#element.classList.contains("normal-mode")) {
+    getText(isMasked = !this.#parent.classList.contains("normal-mode")) {
       const results = [];
       let lastIndex = 0;
       for (const index of this.#maskPoints) {

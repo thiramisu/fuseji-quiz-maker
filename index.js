@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
   $id("symbols").textContent = Array.from(Const.SymbolCharacters).join("")
   
   class Editor {
-    constructor(element, placeholder = "「青眼の白龍」＋「青眼の白龍」＋「青眼の白龍」") {
+    constructor(element, placeholder = "「カオスの儀式」により降臨。") {
       this.#editor = element;
       const
         original = $elm("textarea"),

@@ -13,13 +13,14 @@ window.addEventListener("load", () => {
   $id("symbols").textContent = Array.from(Const.SymbolCharacters).join("")
   
   class Editor {
-    constructor(element) {
+    constructor(element, placeholder = "「青眼の白龍」＋「青眼の白龍」＋「青眼の白龍」") {
       this.#editor = element;
       const
         original = $elm("textarea"),
         maskedContainer = $elm("div");
       original.classList.add("original");
       original.rows = 1;
+      original.placeholder = placeholder;
       maskedContainer.classList.add("masked-container", "normal-mode");
       $id("reverse").addEventListener("click", () => {
         maskedContainer.classList.toggle("normal-mode");
